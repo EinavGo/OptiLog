@@ -21,6 +21,12 @@ pipeline {
                         parallelStages["Build and Deploy - ${service.name}"] = {
                             echo "Processing service: ${service.name}..."
 
+                            stage("Clean Workspace") {
+                                steps {
+                                    deleteDir()
+                                }
+                            }
+
                             stage("Clone Repository - ${service.name}") {
                                 echo "Cloning repository for ${service.name}..."
                                 deleteDir() // Clean workspace
