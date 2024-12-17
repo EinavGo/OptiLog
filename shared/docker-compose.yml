@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  kafka:
+    build:
+      context: ../services/kafka
+    ports:
+      - "9092:9092"
+  flink:
+    build:
+      context: ../services/flink
+    ports:
+      - "8081:8081"
+  opensearch:
+    build:
+      context: ../services/opensearch
+    ports:
+      - "9200:9200"
+  kibana:
+    build:
+      context: ../services/kibana
+    ports:
+      - "5601:5601"
