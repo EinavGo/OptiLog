@@ -30,7 +30,7 @@ pipeline {
 
                                 stage("Clone Repository - ${service.name}") {
                                     echo "Cloning repository for ${service.name}..."
-                                    git branch: 'main', url: 'git@github.com:EinavGo/OptiLog.git', credentialsId: '8e7bc9be-e10d-43d1-8931-1d938880ccc0'
+                                    git branch: 'main', url: 'git@github.com:EinavGo/OptiLog.git', credentialsId: '3dd08245-d374-452a-b539-7d7ab16f92d9'
                                 }
 
                                 stage("Build Docker Image - ${service.name}") {
