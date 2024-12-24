@@ -5,6 +5,7 @@ pipeline {
         DOCKERHUB_USERNAME = 'einavgo'
         IMAGE_TAG = "${env.BUILD_NUMBER}" // Unique tag per build
         KEY_PATH = '/home/ubuntu/.ssh/id_rsa'
+        GIT_SSH_COMMAND = 'ssh -i /home/ubuntu/.ssh/id_rsa -o StrictHostKeyChecking=yes'
     }
 
     stages {
